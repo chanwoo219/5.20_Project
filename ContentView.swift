@@ -45,8 +45,14 @@ struct ContentView: View {
 
                 Section {
                     HStack {
-                        Image(systemName: "airpods.pro")
-                            .foregroundColor(.gray)
+                        ZStack{
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.gray)
+                            Image(systemName: "airpods.pro")
+                                .foregroundColor(.white)
+                        }
                         Text("AirPods")
                         Spacer()
                         Button {
@@ -59,13 +65,25 @@ struct ContentView: View {
                 }
                 Section {
                     HStack {
-                        Image(systemName: "airplane")
-                            .foregroundColor(.orange)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.orange)
+                            Image(systemName: "airplane")
+                                .foregroundColor(.white)
+                        }
                         Toggle("에어플레인 모드", isOn: $isOn)
                     }
                     HStack {
-                        Image(systemName: "wifi")
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
+                            Image(systemName: "wifi")
+                                .foregroundColor(.white)
+                        }
                         Text("Wi-Fi")
                         Spacer()
                         Button {
@@ -77,6 +95,8 @@ struct ContentView: View {
                     }
                     HStack {
                         Image("bluetooth")
+                            .resizable()
+                            .frame(width: 25, height: 25)
                         Text("Bluetooth")
                         Spacer()
                         Button {
@@ -87,8 +107,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "antenna.radiowaves.left.and.right")
-                            .foregroundColor(.green)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.green)
+                            Image(systemName: "antenna.radiowaves.left.and.right")
+                                .foregroundColor(.white)
+                        }
                         Text("셀룰러")
                         Spacer()
                         Button {
@@ -99,8 +125,16 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "personalhotspot")
-                            .foregroundColor(.green)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.green)
+                            Image(systemName: "personalhotspot")
+                                .resizable()
+                                .frame(width: 20, height: 10)
+                                .foregroundColor(.white)
+                        }
                         Text("개인용 핫스팟")
                         Spacer()
                         Button {
@@ -111,8 +145,16 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "battery.100percent")
-                            .foregroundColor(.green)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.green)
+                            Image(systemName: "battery.100percent")
+                                .resizable()
+                                .frame(width: 20, height: 10)
+                                .foregroundColor(.white)
+                        }
                         Text("배터리")
                         Spacer()
                         Button {
@@ -125,8 +167,14 @@ struct ContentView: View {
                 }
                 Section {
                     HStack {
-                        Image(systemName: "gear")
-                            .foregroundColor(.gray)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.gray)
+                            Image(systemName: "gear")
+                                .foregroundColor(.white)
+                        }
                         Text("일반")
                         Spacer()
                         Button {
@@ -137,8 +185,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "accessibility")
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
+                            Image(systemName: "accessibility")
+                                .foregroundColor(.white)
+                        }
                         Text("손쉬운 사용")
                         Spacer()
                         Button {
@@ -149,8 +203,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.gray)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.gray)
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.white)
+                        }
                         Text("검색")
                         Spacer()
                         Button {
@@ -163,7 +223,7 @@ struct ContentView: View {
                     HStack {
                         Image("button")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 25, height: 25)
                         Text("동작 버튼")
                         Spacer()
                         Button {
@@ -174,8 +234,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "sun.max.fill")
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
+                            Image(systemName: "sun.max.fill")
+                                .foregroundColor(.white)
+                        }
                         Text("디스플레이 및 밝기")
                         Spacer()
                         Button {
@@ -187,6 +253,8 @@ struct ContentView: View {
                     }
                     HStack {
                         Image("screen")
+                            .resizable()
+                            .frame(width: 25, height: 25)
                         Text("배경화면")
                         Spacer()
                         Button {
@@ -199,8 +267,7 @@ struct ContentView: View {
                     HStack {
                         Image("stanby")
                             .resizable()
-                            .frame(width: 20, height: 20)
-                            .foregroundColor(.black)
+                            .frame(width: 25, height: 25)
                         Text("스탠바이")
                         Spacer()
                         Button {
@@ -211,8 +278,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "switch.2")
-                            .foregroundColor(.gray)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.gray)
+                            Image(systemName: "switch.2")
+                                .foregroundColor(.white)
+                    }
                         Text("제어 센터")
                         Spacer()
                         Button {
@@ -223,8 +296,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "camera.fill")
-                            .foregroundColor(.gray)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.gray)
+                            Image(systemName: "camera.fill")
+                                .foregroundColor(.white)
+                        }
                         Text("카메라")
                         Spacer()
                         Button {
@@ -235,8 +314,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "apps.iphone")
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
+                            Image(systemName: "apps.iphone")
+                                .foregroundColor(.white)
+                        }
                         Text("홈 화면 및 앱 보관함")
                         Spacer()
                         Button {
@@ -247,9 +332,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image("intelligence")
-                            .resizable()
-                            .frame(width: 20, height: 20)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.black)
+                            Image(systemName: "apple.intelligence")
+                                .foregroundColor(.white)
+                        }
                         Text("Apple Intelligence 및 Siri")
                         Spacer()
                         Button {
@@ -262,8 +352,14 @@ struct ContentView: View {
                 }
                 Section {
                     HStack {
-                        Image(systemName: "bell.badge.fill")
-                            .foregroundColor(.red)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.red)
+                            Image(systemName: "bell.badge.fill")
+                                .foregroundColor(.white)
+                        }
                         Text("알림")
                         Spacer()
                         Button {
@@ -274,8 +370,16 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "speaker.wave.3.fill")
-                            .foregroundColor(.red)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.red)
+                            Image(systemName: "speaker.wave.3.fill")
+                                .resizable()
+                                .frame(width: 20, height: 15)
+                                .foregroundColor(.white)
+                        }
                         Text("사운드 및 햅틱")
                         Spacer()
                         Button {
@@ -286,8 +390,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "moon.fill")
-                            .foregroundColor(.indigo)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.indigo)
+                            Image(systemName: "moon.fill")
+                                .foregroundColor(.white)
+                        }
                         Text("집중 모드")
                         Spacer()
                         Button {
@@ -298,8 +408,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "hourglass")
-                            .foregroundColor(.indigo)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.indigo)
+                            Image(systemName: "hourglass")
+                                .foregroundColor(.white)
+                        }
                         Text("스크린 타임")
                         Spacer()
                         Button {
@@ -312,8 +428,14 @@ struct ContentView: View {
                 }
                 Section {
                     HStack {
-                        Image(systemName: "faceid")
-                            .foregroundColor(.green)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.green)
+                            Image(systemName: "faceid")
+                                .foregroundColor(.white)
+                        }
                         Text("Face ID 및 암호")
                         Spacer()
                         Button {
@@ -324,8 +446,16 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "sos")
-                            .foregroundColor(.red)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.red)
+                            Image(systemName: "sos")
+                                .resizable()
+                                .frame(width: 20, height: 10)
+                                .foregroundColor(.white)
+                        }
                         Text("긴급 구조 요청")
                         Spacer()
                         Button {
@@ -336,8 +466,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "hand.raised.fill")
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.blue)
+                            Image(systemName: "hand.raised.fill")
+                                .foregroundColor(.white)
+                        }
                         Text("개인정보 보호 및 보안")
                         Spacer()
                         Button {
@@ -352,7 +488,7 @@ struct ContentView: View {
                     HStack {
                         Image("wallet")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 25, height: 25)
                         Text("지갑 및 Apple Pay")
                         Spacer()
                         Button {
@@ -365,7 +501,7 @@ struct ContentView: View {
                     HStack {
                         Image("center")
                             .resizable()
-                            .frame(width: 20, height: 20)
+                            .frame(width: 25, height: 25)
                         Text("Game Center")
                         Spacer()
                         Button {
@@ -376,8 +512,14 @@ struct ContentView: View {
                         }
                     }
                     HStack {
-                        Image(systemName: "icloud.fill")
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.white)
+                            Image(systemName: "icloud.fill")
+                                .foregroundColor(.blue)
+                        }
                         Text("iCloud")
                         Spacer()
                         Button {
@@ -390,9 +532,14 @@ struct ContentView: View {
                 }
                 Section {
                     HStack {
-                        Image("app")
-                            .resizable()
-                            .frame(width: 20, height: 20)
+                        ZStack{
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .foregroundColor(.purple)
+                                .frame(width: 25, height: 25)
+                                Image(systemName: "square.grid.3x3.fill")
+                                .foregroundColor(.white)
+                        }
                         Text("앱")
                         Spacer()
                         Button {
@@ -405,7 +552,14 @@ struct ContentView: View {
                 }
                 Section {
                     HStack {
-                        Image(systemName: "hammer.fill")
+                        ZStack {
+                            Image(systemName: "square.fill")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                                .foregroundColor(.gray)
+                            Image(systemName: "hammer.fill")
+                                .foregroundColor(.white)
+                        }
                         Text("개발자")
                         Spacer()
                         Button {
